@@ -10,15 +10,20 @@ import UIKit
 
 class TopPlacesTableViewController: UITableViewController {
 
+    var places = [Place]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        FlickrAPIService.loadTopPlacesList(success: { places in
-                                                        print("Loaded places:\n \(places)")
-                                        },
-                                           failure: { error in
-                                                        print(error)
-                                        })
+        FlickrAPIService.loadTopPlacesList(
+            success: { places in
+                print("Loaded places:\n\(places)")
+                self.places = places
+                self.tableView.reloadData()
+        },
+            failure: { error in
+                print(error)
+        })
         
         
         // Uncomment the following line to preserve selection between presentations
@@ -28,32 +33,23 @@ class TopPlacesTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return places.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = places[indexPath.row].name
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
