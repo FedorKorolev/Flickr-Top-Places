@@ -13,7 +13,12 @@ class TopPlacesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        FlickrAPIService.loadTopPlacesList(failure: {error in })
+        FlickrAPIService.loadTopPlacesList(success: { places in
+                                                        print("Loaded places:\n \(places)")
+                                        },
+                                           failure: { error in
+                                                        print(error)
+                                        })
         
         
         // Uncomment the following line to preserve selection between presentations
