@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  RecentPhotosViewController.swift
 //  Flickr Top Places
 //
 //  Created by Фёдор Королёв on 01.04.17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class RecentPhotosViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
