@@ -14,7 +14,7 @@ class PhotosTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(place)
+        
     }
 
     // MARK: - Table view data source

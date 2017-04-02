@@ -15,22 +15,20 @@ class FlickrAPIService {
         case emptyPlacesList
     }
     
-    static func loadTopPlacesList(success: @escaping( ([Place]) -> Void ), failure: @escaping( (Error) -> Void ) ) {
+    struct Constants {
+        static let serviceURL = "https://api.flickr.com/services/rest/"
+        static let method = "method"
+        static let apiKey = "330926c4466e3c78331faf6db828c278"
         
-        // Build URL
-        struct Constants {
-            static let serviceURL = "https://api.flickr.com/services/rest/"
-            static let method = "method"
-            static let apiKey = "330926c4466e3c78331faf6db828c278"
-            
-            static func buildWith(methodName: String) -> String {
-                return serviceURL + "?" + method + "=" + methodName + "&api_key=" + apiKey + "&format=json&nojsoncallback=1"
-            }
+        static func buildWith(methodName: String) -> String {
+            return serviceURL + "?" + method + "=" + methodName + "&api_key=" + apiKey + "&format=json&nojsoncallback=1"
         }
+    }
+    
+    private static func buildURL(methodName: String, arguments: [String : Any]) -> URL {
+        var urlString = Constants.buildWith(methodName: methodName)
         
-        var urlString = Constants.buildWith(methodName: "flickr.places.getTopPlacesList")
-        
-        let arguments = ["place_type_id" : 7]
+        let arguments = arguments
         
         for (key, value) in arguments {
             urlString.append("&\(key)=\(value)")
@@ -40,10 +38,16 @@ class FlickrAPIService {
         
         print("URL built:\n" + urlString)
         
-        let url = URL(string: urlString)!
-
+        return URL(string: urlString)!
+    }
+    
+    // LOAD TOP PLACES
+    static func loadTopPlacesList(success: @escaping( ([Place]) -> Void ), failure: @escaping( (Error) -> Void ) ) {
         
-        // Access URL
+        // Build URL
+        let url = buildURL(methodName: "flickr.places.getTopPlacesList", arguments: ["place_type_id" : 7])
+        
+        // Download JSON
         print("Server Access...")
         let session = URLSession(configuration: URLSessionConfiguration.default)
         
@@ -102,6 +106,13 @@ class FlickrAPIService {
         
         task.resume()
     }
+    
+    
+    
+    // LOAD PLACE PHOTOS
+    
+    
+    
     
 }
 
