@@ -17,16 +17,22 @@ class PhotosTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
         self.title = place?.name
         
         let api = FlickrAPIService()
         api.search(place: (place?.id)!,
                    success: { photos in
                     print("loaded photos:\n\(photos)")
-                    self.photos = photos
-                    self.tableView.reloadData()
+                    DispatchQueue.main.async {
+                        self.photos = photos
+                        self.tableView.reloadData()
+                    }
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }) { error in
             print(error)
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
         
         

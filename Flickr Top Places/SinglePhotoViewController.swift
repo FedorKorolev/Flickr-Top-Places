@@ -16,8 +16,13 @@ class SinglePhotoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
         imageView.loadImage(link: (photo?.fullPhotoLink)!, highPriority: true)
         title = photo?.title
+        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 
     
