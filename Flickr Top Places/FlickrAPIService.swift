@@ -115,7 +115,7 @@ class FlickrAPIService {
     
     // LOAD PLACE PHOTOS
     
-    func search(place id: String,
+    func search(place id: String?, getRecent: Bool = false,
                 //escaping означает, что это замыкание будет выполнено не в течение работы метода search
         //а когда-то потом
         success:@escaping( ([PhotoInfo]) -> Void ),
@@ -123,9 +123,15 @@ class FlickrAPIService {
     {
         print("а сейчас мы обратимся к серверу")
         
-        let url = self.buildURL(methodName: "flickr.photos.search", arguments: ["place_id" : id,
+        let url: URL
+        
+        if getRecent {
+            url = self.buildURL(methodName: "flickr.photos.getRecent", arguments: ["extras":"geo,url_l,url_s"])
+        } else {
+            url = self.buildURL(methodName: "flickr.photos.search", arguments: ["place_id" : id!,
                                                                                 "has_geo":"1",
-                                                                        "extras":"geo,url_l,url_s"])
+                                                                                "extras":"geo,url_l,url_s"])
+        }
         
         
         //данные получаются не мгновенно
