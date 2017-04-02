@@ -82,10 +82,40 @@
                             <outlet property="delegate" destination="Hnp-e2-9NI" id="GPO-0j-HYH"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="VxR-iK-VtA" kind="show" identifier="Show Photo" id="Xlp-UA-7rY"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcc-dF-dfB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2681" y="-321"/>
+        </scene>
+        <!--Single Photo View Controller-->
+        <scene sceneID="wAX-Te-JxD">
+            <objects>
+                <viewController id="VxR-iK-VtA" customClass="SinglePhotoViewController" customModule="Flickr_Top_Places" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qNI-7O-Rfw"/>
+                        <viewControllerLayoutGuide type="bottom" id="7El-9d-y96"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jG3-XN-2ro">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZLi-1H-l2B">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="ZLi-1H-l2B" id="Wr1-K3-XNy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UdW-P6-xA1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3592.5" y="-321.12676056338029"/>
         </scene>
         <!--Recent Photos-->
         <scene sceneID="wg7-f3-ORb">

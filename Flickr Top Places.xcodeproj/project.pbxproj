@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		754BBD821E918D51007D2139 /* PhotoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754BBD811E918D51007D2139 /* PhotoInfo.swift */; };
 		754BBD841E919860007D2139 /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754BBD831E919860007D2139 /* UIImageView+Download.swift */; };
+		754BBD861E91A87B007D2139 /* SinglePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754BBD851E91A87B007D2139 /* SinglePhotoViewController.swift */; };
 		758FF0551E9029E10044F02A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758FF0541E9029E10044F02A /* AppDelegate.swift */; };
 		758FF0591E9029E10044F02A /* RecentPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758FF0581E9029E10044F02A /* RecentPhotosViewController.swift */; };
 		758FF05C1E9029E10044F02A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758FF05A1E9029E10044F02A /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		754BBD811E918D51007D2139 /* PhotoInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoInfo.swift; sourceTree = "<group>"; };
 		754BBD831E919860007D2139 /* UIImageView+Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Download.swift"; sourceTree = "<group>"; };
+		754BBD851E91A87B007D2139 /* SinglePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinglePhotoViewController.swift; sourceTree = "<group>"; };
 		758FF0511E9029E10044F02A /* Flickr Top Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flickr Top Places.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		758FF0541E9029E10044F02A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		758FF0581E9029E10044F02A /* RecentPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPhotosViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				758FF06B1E903B890044F02A /* TopPlacesTableViewController.swift */,
 				758FF0711E905FD10044F02A /* PhotosTableViewController.swift */,
+				754BBD851E91A87B007D2139 /* SinglePhotoViewController.swift */,
 				758FF0581E9029E10044F02A /* RecentPhotosViewController.swift */,
 			);
 			name = "View Controllers";
@@ -183,6 +186,7 @@
 				758FF0591E9029E10044F02A /* RecentPhotosViewController.swift in Sources */,
 				758FF0551E9029E10044F02A /* AppDelegate.swift in Sources */,
 				758FF0721E905FD10044F02A /* PhotosTableViewController.swift in Sources */,
+				754BBD861E91A87B007D2139 /* SinglePhotoViewController.swift in Sources */,
 				754BBD841E919860007D2139 /* UIImageView+Download.swift in Sources */,
 				758FF06A1E903AC00044F02A /* FlickrAPIService.swift in Sources */,
 				758FF06C1E903B890044F02A /* TopPlacesTableViewController.swift in Sources */,
