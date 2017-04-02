@@ -58,13 +58,13 @@ class PhotosTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let image = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        image.contentMode = .scaleAspectFit
         image.loadImage(link: photos[indexPath.row].iconLink)
         print("Loaded image: \(image)")
         cell.addSubview(image)
-        
         cell.textLabel?.text = photos[indexPath.row].title
 
         return cell

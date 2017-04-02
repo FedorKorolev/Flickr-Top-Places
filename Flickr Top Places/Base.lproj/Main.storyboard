@@ -196,11 +196,11 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Top Places-->
+        <!--Navigation Controller-->
         <scene sceneID="Krq-DS-zsu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gYB-gu-UXV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Top Places" id="DMO-fF-Kcm"/>
+                    <tabBarItem key="tabBarItem" systemItem="topRated" id="DMO-fF-Kcm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RQm-8V-wxW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -215,11 +215,11 @@
             </objects>
             <point key="canvasLocation" x="750" y="-321.12676056338029"/>
         </scene>
-        <!--Recent-->
+        <!--Navigation Controller-->
         <scene sceneID="6Lo-dQ-q5h">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eWT-NT-8UR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Recent" id="ENk-kT-7Gq"/>
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="ENk-kT-7Gq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lNf-pN-yj6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -236,6 +236,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Xlp-UA-7rY"/>
+        <segue reference="p6I-Dn-dDq"/>
     </inferredMetricsTieBreakers>
 </document>
