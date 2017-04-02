@@ -39,6 +39,10 @@ class PhotosTableViewController: UITableViewController {
         
     }
 
+    @IBAction func refresh(_ sender: UIBarButtonItem) {
+        viewDidLoad()
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

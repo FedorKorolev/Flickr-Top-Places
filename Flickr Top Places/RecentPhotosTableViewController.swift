@@ -33,5 +33,8 @@ class RecentPhotosTableViewController: PhotosTableViewController {
         performSegue(withIdentifier: "Show Photo From Recent Tab", sender: photos[indexPath.row])
     }
 
+    @IBAction override func refresh(_ sender: UIBarButtonItem) {
+        viewDidLoad()
+    }
     
 }

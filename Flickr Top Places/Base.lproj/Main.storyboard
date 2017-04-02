@@ -41,7 +41,13 @@
                             <outlet property="delegate" destination="wLg-kv-BU8" id="7oy-8Q-iRv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Flickr Top Places" id="SZ8-yb-7cc"/>
+                    <navigationItem key="navigationItem" title="Flickr Top Places" id="SZ8-yb-7cc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="KmN-tn-E11">
+                            <connections>
+                                <action selector="refresh:" destination="wLg-kv-BU8" id="bzl-sw-A12"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="Hnp-e2-9NI" kind="show" identifier="Show Photos of Place" id="h2W-7F-N2F"/>
                     </connections>
@@ -50,7 +56,7 @@
             </objects>
             <point key="canvasLocation" x="1747.5" y="-321.12676056338029"/>
         </scene>
-        <!--Photos Table View Controller-->
+        <!--Title-->
         <scene sceneID="oUI-06-hXs">
             <objects>
                 <tableViewController id="Hnp-e2-9NI" customClass="PhotosTableViewController" customModule="Flickr_Top_Places" customModuleProvider="target" sceneMemberID="viewController">
@@ -82,6 +88,13 @@
                             <outlet property="delegate" destination="Hnp-e2-9NI" id="GPO-0j-HYH"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="zgE-T1-ors">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="3NT-NJ-6lk">
+                            <connections>
+                                <action selector="refresh:" destination="Hnp-e2-9NI" id="uWs-oA-bx2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="VxR-iK-VtA" kind="show" identifier="Show Photo" id="Xlp-UA-7rY"/>
                     </connections>
@@ -149,7 +162,13 @@
                             <outlet property="delegate" destination="7za-qN-PD9" id="DrA-X8-x9B"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Recent Flickr Photos" id="K5g-xG-5sV"/>
+                    <navigationItem key="navigationItem" title="Recent Flickr Photos" id="K5g-xG-5sV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Drc-Cm-WWI">
+                            <connections>
+                                <action selector="refresh:" destination="7za-qN-PD9" id="eA8-qJ-ryn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="VxR-iK-VtA" kind="show" identifier="Show Photo From Recent Tab" id="p6I-Dn-dDq"/>
                     </connections>
@@ -217,6 +236,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="p6I-Dn-dDq"/>
+        <segue reference="Xlp-UA-7rY"/>
     </inferredMetricsTieBreakers>
 </document>
