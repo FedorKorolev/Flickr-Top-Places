@@ -21,7 +21,7 @@ class FlickrAPIService {
         struct Constants {
             static let serviceURL = "https://api.flickr.com/services/rest/"
             static let method = "method"
-            static let apiKey = "77791ca940bba36e3b8facb70e26d836"
+            static let apiKey = "330926c4466e3c78331faf6db828c278"
             
             static func buildWith(methodName: String) -> String {
                 return serviceURL + "?" + method + "=" + methodName + "&api_key=" + apiKey + "&format=json&nojsoncallback=1"
