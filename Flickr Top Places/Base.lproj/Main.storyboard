@@ -115,12 +115,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZLi-1H-l2B">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZLi-1H-l2B">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZLi-1H-l2B" firstAttribute="leading" secondItem="jG3-XN-2ro" secondAttribute="leading" id="3D8-H1-q1j"/>
+                            <constraint firstAttribute="trailing" secondItem="ZLi-1H-l2B" secondAttribute="trailing" id="85G-LX-fez"/>
+                            <constraint firstItem="ZLi-1H-l2B" firstAttribute="bottom" secondItem="7El-9d-y96" secondAttribute="top" id="aNm-aP-uuw"/>
+                            <constraint firstItem="ZLi-1H-l2B" firstAttribute="top" secondItem="qNI-7O-Rfw" secondAttribute="bottom" id="nve-Mv-gO6"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="ZLi-1H-l2B" id="Wr1-K3-XNy"/>
