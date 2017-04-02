@@ -86,8 +86,8 @@
 		758FF06F1E903E670044F02A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				758FF06D1E903E5F0044F02A /* Place.swift */,
 				758FF0691E903AC00044F02A /* FlickrAPIService.swift */,
+				758FF06D1E903E5F0044F02A /* Place.swift */,
 				754BBD811E918D51007D2139 /* PhotoInfo.swift */,
 			);
 			name = Models;

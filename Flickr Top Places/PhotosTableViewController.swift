@@ -12,8 +12,21 @@ class PhotosTableViewController: UITableViewController {
 
     var place = Place(json: ["":""])
     
+    var photos = [PhotoInfo]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let api = FlickrAPIService()
+        api.search(place: (place?.id)!,
+                   success: { photos in
+                    print("loaded photos:\n\(photos)")
+                    self.photos = photos
+        }) { error in
+            print(error)
+        }
+        
+        
         
     }
 

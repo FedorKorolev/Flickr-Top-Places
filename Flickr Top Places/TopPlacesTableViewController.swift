@@ -15,7 +15,9 @@ class TopPlacesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        FlickrAPIService.loadTopPlacesList(
+        let api = FlickrAPIService()
+        
+        api.loadTopPlacesList(
             success: { places in
                 print("Loaded places:\n\(places)")
                 self.places = places
